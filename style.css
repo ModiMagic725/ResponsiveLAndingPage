@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #ffd700;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #fff;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.split .text, .split .image {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+}
+
+.split .text h1, .split .text h2, .split .text p {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero .text {
+    text-align: left;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.hero .text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero .text p {
+    font-size: 1.5em;
+}
+
+.hero .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about .image img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.about .image img:hover {
+    transform: scale(1.1);
+}
+
+.about .text {
+    text-align: left;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffd700;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+#about, #plan, #review, #contact {
+    background-color: #111;
+}
+
+#home {
+    background-color: #000;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.plan {
+    background-color: rgba(255, 215, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #ffd700;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+}
+
+.plan h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.plan p {
+    font-size: 1.2em;
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review {
+    background-color: rgba(255, 215, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ffd700;
+    border-radius: 10px;
+    width: 80%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideInUp 1.5s ease-in-out;
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.review:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+form input, form button {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form button:focus {
+    border-color: #fff;
+}
+
+form button {
+    background-color: #ffd700;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+form button:hover {
+    background-color: #e6c200;
+    color: #fff;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: fadeIn 2s ease-in-out;
+}
